@@ -1,0 +1,99 @@
+:root {
+    --pallette-white: #FFFFFF;
+    --palette-black: #000000;
+    --palette-dark-gray: #262626;
+    --palette-light-gray: #A5A5A5;
+}
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    /* Safari support */
+    scroll-snap-type: y mandatory;
+    background-color: var(--palette-dark-gray);
+
+    /* default text style */
+    color: var(--pallette-white);
+    font-family: 'Varela Round', sans-serif;
+}
+::selection {
+    color: var(--palette-black);
+    background: var(--palette-light-gray);
+}
+.section {
+    scroll-snap-align: start;
+    scroll-margin-top: 8vh;
+    scroll-snap-stop: always;
+
+}
+.space-below {
+    padding-bottom: 30%;
+}
+.big-space-below {
+    padding-bottom: 50%;
+}
+.section-video {
+    /* width: 100%; */
+    height: 85vh;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+.test-long {
+    height: 200vh;
+}
+h1 {
+    margin-left: 15%;
+}
+a {
+    text-decoration: none;
+    color: var(--pallette-white);
+}
+footer {
+    text-align: center;
+    margin-bottom: 3.5vh;
+    font-size: 1.2em;
+}
+#map {
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    filter: contrast(70%);
+}
+#city-text {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+.leaflet-control-attribution a {
+    color: black;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-title {
+    font-size: 4em;
+    width: 90vw;
+    margin: 5%;
+    padding-top: 30vh;
+}
+.fadein-text {
+    background: linear-gradient(270deg, var(--palette-dark-gray) 10%, 50%, var(--pallette-white) 90%);
+    background-position:100% 50%;
+    background-size: 400% 400%;
+    animation: fadein 3s ease-in-out forwards;
+    animation-iteration-count: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes fadein {
+    0%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
